@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Insulin Calculator</string>
+    <string name="correction_dose">Correction Dose</string>
+    <string name="insulin_calc">Carb Calculator</string>
+    <string name="zero_units">0.0 Units</string>
+    <string name="good_morning">Good Morning!</string>
+    <string name="good_afternoon">Good Afternoon!</string>
+    <string name="good_evening">Good Evening!</string>
+    <string name="good_night">Good Night!</string>
+    <string name="current_carb_conversion">Your current insulin to carb ratio is:\n 1 Unit : %.2f Carbs</string>
+    <string name="insulin_amount">%.1f Units</string>
+    <string name="correction_dose_calculator">Insulin Correction Dose Calculator</string>
+    <string name="mmol_l">mmol/L</string>
+    <string name="g">g</string>
+    <string name="current_blood_glucose_conversion">Your current insulin to blood glucose ratio is:\n 1 Unit : %.2f mmol/L</string>
+    <string name="blood_sugar">Blood Sugar</string>
+    <string name="you_need">You need</string>
+    <string name="carbs">Carbs</string>
+    <string name="desired_blood_sugar">Desired Blood Sugar</string>
+    <string name="glucose_correction_dose_calculator">Glucose Correction Dose Calculator</string>
+</resources>

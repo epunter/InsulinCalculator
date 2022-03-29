@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CorrectionDoseCalculator">
+
+    <TextClock
+        android:id="@+id/correctionDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_margin="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="dateTime"
+        tools:targetApi="jelly_bean_mr1" />
+
+    <TextView
+        android:id="@+id/currentCorrectionConversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/correctionDateTime"
+        tools:text="current conversion rate"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/mmol_l"
+        app:layout_constraintStart_toEndOf="@id/txtBloodGlucose"
+        app:layout_constraintTop_toTopOf="@id/txtBloodGlucose"
+        app:layout_constraintBottom_toBottomOf="@id/txtBloodGlucose"
+        tools:text="mmol/L"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.4"
+        android:orientation="horizontal"/>
+
+    <EditText
+        android:id="@+id/txtDesiredBloodGlucose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:maxLength="5"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/desired_blood_sugar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/currentCorrectionConversion"
+        app:layout_constraintBottom_toTopOf="@id/txtBloodGlucose" />
+
+    <EditText
+        android:id="@+id/txtBloodGlucose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:maxLength="5"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/blood_sugar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDesiredBloodGlucose"
+        app:layout_constraintBottom_toBottomOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/lblYouNeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/you_need"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBloodGlucose"
+        tools:text="You need"/>
+
+    <TextView
+        android:id="@+id/correctionInsulinDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblYouNeed"
+        tools:text="insulin dose"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
